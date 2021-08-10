@@ -13,7 +13,7 @@ import argparse
 
 
 # Start Ray for multi-processing
-cpu_nums = 70
+cpu_nums = 75
 ray.init(num_cpus=cpu_nums)
 # ray.init()
 
@@ -167,11 +167,11 @@ def ray_best_rouge(index, test_reviews, dataset_name, subset_name):
     # Load some dictionaries
     train_id2sentence_filepath = '../Dataset/{}/train/sentence/id2sentence.json'.format(dataset_name)
     with open(train_id2sentence_filepath, 'r') as f_train_sent:
-        print("Load file: {}".format(train_id2sentence_filepath))
+        # print("Load file: {}".format(train_id2sentence_filepath))
         id_to_sent_trainset = json.load(f_train_sent)
     test_id2sentence_filepath = '../Dataset/{}/test/sentence/id2sentence.json'.format(dataset_name)
     with open(test_id2sentence_filepath, 'r') as f_test_sent:
-        print("Load file: {}".format(test_id2sentence_filepath))
+        # print("Load file: {}".format(test_id2sentence_filepath))
         id_to_sent_testset = json.load(f_test_sent)
 
     best_rouge_scores = []

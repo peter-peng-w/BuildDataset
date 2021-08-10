@@ -1,1 +1,1 @@
-python greedy_writefile_test_proxy.py --dataset "yelp" --subset "valid" --window_size 2500 --thread 38 --bias_size 95000 --bias_threads 38
+python greedy_writefile_test_proxy.py --dataset "yelp" --subset "valid" --window_size 300 --thread 72 --bias_size 0 --bias_threads 0
